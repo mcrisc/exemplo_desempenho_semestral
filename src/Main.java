@@ -1,12 +1,16 @@
 import br.usp.icmc.desempenho.Desempenho;
 import br.usp.icmc.desempenho.DesempenhoPrinter;
+import br.usp.icmc.desempenho.MediaProvaCalculator;
 import br.usp.icmc.desempenho.SubMalCalculator;
 
 
 public class Main {
 	public static void main(String[] args) {
 		final DesempenhoPrinter printer = new DesempenhoPrinter();
+		final MediaProvaCalculator mediaCalculator = new SubMalCalculator();
+		
 		Desempenho desempenho = readDesempenho();
+		desempenho.setMediaProvaCalculator(mediaCalculator);
 		
 		printer.print(desempenho);
 	}
