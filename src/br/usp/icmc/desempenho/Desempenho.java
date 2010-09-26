@@ -1,6 +1,7 @@
 package br.usp.icmc.desempenho;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Desempenho {
@@ -8,6 +9,7 @@ public class Desempenho {
 	private List<Double> notasTrabalhos = new ArrayList<Double>();
 	private double notaProva1;
 	private double notaProva2;
+	private double notaProvaSub;
 	
 	public double calcularMedia() {
 		/*
@@ -17,8 +19,12 @@ public class Desempenho {
 		return (2 * calcularMediaTrabalhos() + 3 * calcularMediaProvas()) / 5; 
 	}
 
+	private double max(double valor1, double valor2) {
+		return valor1 > valor2 ? valor1 : valor2;
+	}
+	
 	private double calcularMediaProvas() {
-		return (notaProva1 + notaProva2) / 2;
+		return (max(notaProva1, notaProva2) + notaProvaSub) / 2;
 	}
 
 	private double calcularMediaTrabalhos() {
@@ -67,5 +73,13 @@ public class Desempenho {
 		 * que usa essa classe. 
 		 */
 		notasTrabalhos.add(nota);
+	}
+
+	public double getNotaProvaSub() {
+		return notaProvaSub;
+	}
+
+	public void setNotaProvaSub(double notaProvaSub) {
+		this.notaProvaSub = notaProvaSub;
 	}
 }

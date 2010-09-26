@@ -15,6 +15,7 @@ public class Main {
 		desempenho.setNusp(4511488);
 		desempenho.setNotaProva1(3.7);
 		desempenho.setNotaProva2(5.2);
+		desempenho.setNotaProvaSub(0.5);
 
 		desempenho.addNotaTrabalho(8);
 		desempenho.addNotaTrabalho(7.5);
