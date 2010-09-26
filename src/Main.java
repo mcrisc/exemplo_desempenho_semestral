@@ -1,5 +1,6 @@
 import br.usp.icmc.desempenho.Desempenho;
 import br.usp.icmc.desempenho.DesempenhoPrinter;
+import br.usp.icmc.desempenho.SubMalCalculator;
 
 
 public class Main {
