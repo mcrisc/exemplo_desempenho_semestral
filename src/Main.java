@@ -1,4 +1,17 @@
+import br.usp.icmc.desempenho.Desempenho;
+import br.usp.icmc.desempenho.DesempenhoPrinter;
+
 
 public class Main {
-	// TODO criar main aqui
+	public static void main(String[] args) {
+		final DesempenhoPrinter printer = new DesempenhoPrinter();
+		Desempenho desempenho = new Desempenho();
+		desempenho.setNusp(4511488);
+		desempenho.setNotaProva1(3.7);
+		desempenho.setNotaProva2(5.2);
+
+		
+		
+		printer.print(desempenho);
+	}
 }
